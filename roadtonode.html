@@ -1,0 +1,113 @@
+<html>
+<head>
+<title> Hello World </title>
+</head>
+
+<body>
+
+<h1> Notice me Senpai </h1>
+<p>
+
+Senpaiiii ;ww;
+
+
+</p>
+
+<button id = "goodbtn"> Don't touch me there S-S-Senpai!! </button>
+<button id ="badbtn"> STAHP </button>
+
+<script>
+
+  var y; //Shit is initialized to undefined
+  var x = 5; //Number
+  x = "Hello World"; //String
+  x = true; //Boolean
+  x = undefined; //Undefined
+  console.log(y);
+
+
+  var item = {name: "10pc Nuggets",
+              price: "$1.99",
+              location: "Burger King"};
+  console.log(item.name);
+
+  var hungry_level = 5; //Level on 10
+  if (hungry_level >= 9){
+    console.log("Feed me Please");
+  } else {
+    console.log("Keep on coding");
+  }
+
+  /* == vs ===
+  == compares equality
+  === compares strict equality,
+  hence if they are EXACTLY the same.
+  Ex: 1 isn't the same as True so 1 === True is false
+  but 1 == True is True
+  */
+  console.log(0 == false);
+  console.log(0 === false);
+  console.log(1 == true);
+  console.log(1 === true);
+
+  var x = 5;
+  function foo() {
+    var x = 10;
+    console.log(x);
+    for (var i = 0; i < 5; i++){
+      let x = 5;
+      console.log(x);
+    }
+    console.log(x);
+  };
+
+  var arr = ["Apple", "Banana", 2, 5.4, true];
+  var arr2 = ["Watermelons", "Lemons"];
+    console.log(arr + arr2);
+  arr.push(...arr2);
+    console.log(arr);
+    console.log(arr[0]);
+//Slice:
+//First number is where you start
+//Second number is how many removed after it starting with 1(itself)
+  arr.slice(1, 4);
+    console.log(arr);
+//Splice:
+//Same as slice, but removes and returns them
+  arr.splice(2, 1);
+    console.log(arr);
+
+//Will remove 2 elements from the index 2 and put chocolate there
+  arr.splice(2, 2,"Chocolate");
+    console.log(arr);
+
+  arr.forEach(function(elem) {
+    console.log(elem);
+  });
+
+  var foo = (x, y) => {
+    console.log(x,y);
+  }
+
+  foo(1,2);
+
+  const btn1 = document.querySelector('#goodbtn');
+  btn1.addEventListener('click', e => {
+    console.log("Kyaaaaaaa");
+  });
+  const btn2 = document.querySelector('#badbtn');
+  btn2.addEventListener('click',e => {
+    var str = "BAKA!";
+    for(var i = 0; i < 10; i++){
+      str = str + str;
+    }
+    const para = document.querySelector('p');
+    para.innerHTML = str;
+
+  })
+
+
+</script>
+
+</body>
+</html>
